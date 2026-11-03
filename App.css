@@ -1,0 +1,685 @@
+.siteWrapper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: grey;
+}
+
+.embedWrapper {
+  pointer-events: none;
+}
+
+.helpWrapper {
+  z-index: 10;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  place-content: center; 
+  background: rgb(0,0,0,0.75);
+  animation-name: fadeInHelpBackground;
+  animation-duration: 0.75s;
+}
+
+.helpWrapperClose {
+  z-index: 10;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  place-content: center; 
+  background: rgb(0,0,0,0.75);
+  animation-name: fadeOutHelpBackground;
+  animation-duration: 0.75s;
+}
+
+.musicWrapper {
+  z-index: 5;
+  position: fixed;
+  bottom: 0%;
+  right: 0%;
+  background: none;
+}
+
+.menuWrapper {
+  z-index: 5;
+  position: fixed;
+  background: none;
+}
+
+.creditsWrapper {
+  z-index: 5;
+  position: fixed;
+  bottom: 0%;
+  right: 0%;
+  background: none;
+}
+
+/* #region <Control Buttons> */
+
+.helpButton {
+  z-index: 3;
+  position: absolute;
+  top: 3px;
+  right: 188px;
+  height: 30px;
+  width: 30px;
+  filter: opacity(0.3);
+  transition: all 0.2s;
+}
+
+.menuButton {
+  z-index: 3;
+  position: absolute;
+  top: 3px;
+  right: 151px;
+  height: 30px;
+  width: 30px;
+  filter: opacity(0.3);
+  transition: all 0.2s;
+}
+
+.musicButton {
+  z-index: 3;
+  position: absolute;
+  top: 3px;
+  right: 114px;
+  height: 30px;
+  width: 30px;
+  filter: opacity(0.3);
+  transition: all 0.2s;
+}
+
+.shuffleButton {
+  z-index: 3;
+  position: fixed;
+  top: 3px;
+  right: 77px;
+  height: 30px;
+  width: 30px;
+  filter: opacity(0.3);
+  transition: all 0.2s;
+}
+
+.muteButton {
+  z-index: 3;
+  position: fixed;
+  top: 3px;
+  right: 40px;
+  height: 30px;
+  width: 30px;
+  filter: opacity(0.3);
+  transition: all 0.2s;
+}
+
+.vidLink {
+  z-index: 3;
+  position: absolute;
+  top: 3px;
+  right: 5px;
+  filter: opacity(0.3);
+  transition: all 0.2s;
+}
+
+.vidLinkButton {
+  height: 30px;
+  width: 30px;
+}
+
+/* #endregion */
+
+/* #region <Help Popup> */
+
+.boxHelp {
+  z-index: 5;
+  position: relative;
+  height: fit-content;
+  width: 50vw;
+  min-width: 350px;
+  max-width: 500px;
+  padding: 20px;
+  padding-bottom: 50px;
+  margin: 0;
+  background: rgba(255, 255, 255, 0.5);
+  border: 1px solid black;
+  border-radius: 10px;
+  font-family: Arial, monospace;
+  filter: drop-shadow(2px 4px 6px black);
+  animation-name: fadeInHelp;
+  animation-duration: 0.75s;
+}
+
+.boxHelpClose { 
+  z-index: 5;
+  position: relative;
+  height: fit-content;
+  width: 50vw;
+  min-width: 350px;
+  max-width: 500px;
+  padding: 20px;
+  padding-bottom: 50px;
+  margin: 0;
+  background: rgba(255, 255, 255, 0.5);
+  border: 1px solid black;
+  border-radius: 10px;
+  font-family: Arial, monospace;
+  filter: drop-shadow(2px 4px 6px black);
+  animation-name: fadeOutHelp;
+  animation-duration: 0.75s;
+}
+
+.closeHelpIcon {
+  z-index: 5;
+  position: absolute;
+  top: 4px;
+  right: 5px;
+  background: #ededed;
+  border: 1.5px solid black;
+  border-radius: 50%;
+  transform: scale(0.85);
+  filter: opacity(0.3);
+  transition: all 0.2s;
+}
+
+.helpBoxTitle {
+  margin-top: 0;
+  text-align: center;
+}
+
+.dontShowPopup {
+  z-index: 5;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5px;
+  background: rgb(255,255,255,0.5);
+  border: 1.5px solid black;
+  color: black;
+  filter: opacity(0.3);
+  transition: all 0.2s;
+}
+
+/* #endregion */
+
+/* #region <City Menu> */
+
+.menu {
+  z-index: 5;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  -webkit-text-stroke: 0.25px lightgray;
+}
+
+.twitterLink {
+  position: absolute;
+  bottom: 3px;
+  left: 10px;
+  scale: 1.3;
+  filter: opacity(0.3);
+  transition: all 0.2s;
+}
+
+.kofiLink {
+  position: absolute;
+  bottom: 3px;
+  left: 35px;
+  scale: 1.3;
+  filter: opacity(0.3);
+  transition: all 0.2s;
+}
+
+.creditsButton {
+  z-index: 5;
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgb(255,255,255,0.75);
+  border: 1.5px solid black;
+  color: black;
+  filter: opacity(0.3);
+  transition: all 0.2s;
+}
+
+.boxMenu {
+  z-index: 5;
+  position: fixed;
+  top: 60px;
+  right: 0%;
+  height: 120px;
+  min-height: 10vh;
+  width: 218px;
+  margin: 0;
+  padding: 20px;
+  background-color: rgba(255,255,255,0.5);
+  border-radius: 10px;
+  border: 1px solid black;
+  font-family: Arial, monospace;
+  filter: drop-shadow(2px 4px 6px black);
+  animation-name: slideIn;
+  animation-duration: 0.75s;
+}
+
+.boxMenuClose {
+  z-index: 5;
+  position: fixed;
+  top: 60px;
+  right: 0%;
+  height: 120px;
+  min-height: 10vh;
+  width: 218px;
+  margin: 0;
+  padding: 20px;
+  background-color: rgba(255,255,255,0.5);
+  border-radius: 10px;
+  border: 1px solid black;
+  font-family: Arial, monospace;
+  filter: drop-shadow(2px 4px 6px black);
+  animation-name: slideOut;
+  animation-duration: 0.75s;
+}
+
+.closeMenuIcon {
+  z-index: 5;
+  position: absolute;
+  top: 3px;
+  right: 3px;
+  background: #ededed;
+  border: 1.5px solid black;
+  border-radius: 50%;
+  transform: scale(0.85);
+  filter: opacity(0.3);
+  transition: all 0.2s;
+}
+
+/* #endregion */
+
+/* #region <Credits> */
+
+.boxCredits {
+  z-index: 5;
+  position: relative;
+  height: fit-content;
+  width: 50vw;
+  max-width: 500px;
+  min-width: 350px;
+  padding: 20px;
+  background: rgb(211, 211, 211, 0.75);
+  border: 1px solid black;
+  border-radius: 10px;
+  font-family: Arial, monospace;
+  filter: drop-shadow(2px 4px 6px black);
+  animation-name: slideIn;
+  animation-duration: 0.75s;
+}
+
+.boxCreditsClose {
+  z-index: 5;
+  position: relative;
+  height: fit-content;
+  width: 50vw;
+  max-width: 500px;
+  min-width: 350px;
+  padding: 20px;
+  background: rgb(211, 211, 211, 0.75);
+  border: 1px solid black;
+  border-radius: 10px;
+  font-family: Arial, monospace;
+  filter: drop-shadow(2px 4px 6px black);
+  animation-name: slideOut;
+  animation-duration: 0.75s;
+}
+
+.closeCreditsIcon {
+  z-index: 5;
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  background: #ededed;
+  border: 1.5px solid black;
+  border-radius: 50%;
+  transform: scale(0.85);
+  filter: opacity(0.3);
+  transition: all 0.2s;
+}
+
+.credits {
+  z-index: 5;
+  position: relative;
+  height: fit-content;
+  font-family: Arial, monospace;
+}
+
+/* #endregion */
+
+/* #region <Video Player> */
+
+.videoResponsive {
+  z-index: 1;
+  position: relative;
+  width: 300%;
+  height: 100vh;
+  left: -100%;
+  padding-bottom: 56.25%;
+  padding-top: 25px;
+}
+
+.videoResponsive iframe {
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.videoWrapper {
+  z-index: 1;
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.videoDebug {
+  z-index: 3;
+  position: fixed;
+  bottom: 0%;
+  right: 0%;
+  background: rgb(255,255,255,0.75);
+  color: black;
+  filter: opacity(0.3);
+  transition: all 0.2s;
+}
+
+/* #endregion */
+
+/* #region <Music Player> */
+
+.music iframe {
+  z-index: 5;
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  height: 100vh;
+  width: 300px;
+  margin: 0;
+  animation-name: musicSlideIn;
+  animation-duration: 0.75s;
+}
+
+.musicClose iframe {
+  z-index: 5;
+  position: fixed;
+  top: 0%;
+  left: -300px;
+  height: 100vh;
+  width: 300px;
+  margin: 0;
+  animation-name: musicSlideOut;
+  animation-duration: 0.75s;
+}
+
+.volSlider {
+  z-index: 3;
+  top: 40px;
+  right: 2px;
+  height: 10px;
+  width: 212px;
+  filter: opacity(0.3);
+  position: fixed;
+  background: white;
+  transition: all 0.2s;
+}
+
+/* #endregion */
+
+/* #region <Keyframe Animations> */
+
+@keyframes slideIn {
+  from {transform: translateX(100%); }
+  to {transform: translateX(0%); }
+}
+
+@keyframes slideOut {
+  from {transform: translateX(0%); }
+  to {transform: translateX(100%); }
+}
+
+@keyframes musicSlideIn {
+  from {transform: translateX(-100%); }
+  to {transform: translateX(0%); }
+}
+
+@keyframes musicSlideOut {
+  from {transform: translateX(100%); }
+  to {transform: translateX(0%); } 
+} 
+
+@keyframes fadeInHelp {
+  from {transform: translateY(25%); opacity: 0;}
+  to {transform: translateY(0); opacity: 1;}
+}
+
+@keyframes fadeInHelpBackground {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes fadeOutHelp {
+  from {transform: translateY(0); opacity: 1;}
+  to {transform: translateY(25%); opacity: 0;}
+}
+
+@keyframes fadeOutHelpBackground {
+  from {opacity: 1;}
+  to {opacity: 0;}
+}
+
+/* #endregion */
+
+/* #region <Hover Stylings> */
+
+.helpButton:hover       ,   .menuButton:hover       ,
+.musicButton:hover      ,   .muteButton:hover       ,   
+.shuffleButton:hover    ,   .vidLink:hover          ,   
+.volSlider:hover        ,
+.closeHelpIcon:hover    ,   .closeMenuIcon:hover    ,   
+.closeCreditsIcon:hover ,   .dontShowPopup:hover    ,
+.creditsButton:hover    ,   .videoDebug:hover       ,
+.twitterLink:hover      ,  
+.kofiLink:hover {
+  filter: opacity(1);
+}
+
+/* #endregion */
+
+/* #region <Generic Mobile Stylings> */
+
+@media screen and (max-width: 1224px) {
+  .helpWrapper {
+    overflow: auto;
+  }
+
+  .helpBoxTitle {
+    font-size: medium;
+  }
+
+  .boxMenu {
+    z-index: 5;
+    position: fixed;
+    top: 60px;
+    right: 0px;
+    height: 120px;
+    width: 218px;
+    min-height: 10vh;
+    margin: 0;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    border: 1px solid black;
+    font-family: Arial, monospace;
+    filter: drop-shadow(2px 4px 6px black);
+  }
+
+  .videoResponsive iframe {
+    scale: 1.3;
+  }
+
+  .music iframe {
+    z-index: 5;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    height: 100vh;
+    width: 225px;
+    margin: 0;
+    animation-name: musicSlideIn;
+    animation-duration: 0.75s;
+  }
+
+  .musicClose iframe {
+    z-index: 5;
+    position: fixed;
+    top: 0%;
+    left: -225px;
+    height: 100vh;
+    width: 225px;
+    margin: 0;
+    animation-name: musicSlideOut;
+    animation-duration: 0.75s;
+  }
+}
+
+@media screen and (max-width: 1224px) and (orientation: landscape) {
+  .videoResponsive iframe {
+    scale: 1.3;
+  }
+}
+
+/* #endregion */
+
+/* #region <iPhone Specific Stylings> */
+
+@media screen 
+and
+(
+  ((width: 375px) 
+  and (height: 812px) 
+  and (-webkit-device-pixel-ratio: 3))
+    or 
+  ((width: 390px) 
+  and (height: 844px) 
+  and (-webkit-device-pixel-ratio: 3)) 
+    or 
+  ((width: 428px) 
+  and (height: 926px) 
+  and (-webkit-device-pixel-ratio: 3))
+    or 
+  ((width: 414px) 
+  and (height: 896px) 
+  and (-webkit-device-pixel-ratio: 2))
+    or 
+  ((width: 375px) 
+  and (height: 812px) 
+  and (-webkit-device-pixel-ratio: 3))
+    or 
+  ((width: 414px) 
+  and (height: 896px) 
+  and (-webkit-device-pixel-ratio: 3))
+) {
+  .helpWrapper {
+    overflow: auto;
+  }
+
+  .helpBoxTitle {
+    font-size: medium;
+  }
+
+  .boxMenu {
+    z-index: 5;
+    position: fixed;
+    top: 60px;
+    right: 0px;
+    height: 120px;
+    width: 218px;
+    min-height: 10vh;
+    margin: 0;
+    padding: 20px;
+    background-color: rgba(255,255,255,0.5);
+    border-radius: 10px;
+    border: 1px solid black;
+    font-family: Arial, monospace;
+    filter: drop-shadow(2px 4px 6px black);
+  }
+
+  .videoResponsive iframe {
+    scale: 1.3;
+  }
+
+  .music iframe {
+    z-index: 5;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    height: 100vh;
+    width: 225px;
+    margin: 0;
+    animation-name: musicSlideIn;
+    animation-duration: 0.75s;
+  }
+  
+  .musicClose iframe {
+    z-index: 5;
+    position: fixed;
+    top: 0%;
+    left: -225px;
+    height: 100vh;
+    width: 225px;
+    margin: 0;
+    animation-name: musicSlideOut;
+    animation-duration: 0.75s;
+  }
+}
+
+@media screen 
+and
+(
+  ((width: 375px) 
+  and (height: 812px) 
+  and (-webkit-device-pixel-ratio: 3))
+    or 
+  ((width: 390px) 
+  and (height: 844px) 
+  and (-webkit-device-pixel-ratio: 3)) 
+    or 
+  ((width: 428px) 
+  and (height: 926px) 
+  and (-webkit-device-pixel-ratio: 3))
+    or 
+  ((width: 414px) 
+  and (height: 896px) 
+  and (-webkit-device-pixel-ratio: 2))
+    or 
+  ((width: 375px) 
+  and (height: 812px) 
+  and (-webkit-device-pixel-ratio: 3))
+    or 
+  ((width: 414px) 
+  and (height: 896px) 
+  and (-webkit-device-pixel-ratio: 3))
+)
+and (orientation: landscape) {
+  .videoResponsive iframe {
+    scale: 1.3;
+  }
+}
+
+/* #endregion */
+
